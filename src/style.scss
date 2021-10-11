@@ -1,16 +1,33 @@
 // Utilities
 @forward './scss/utilities/variables.scss';
 // Base
-@forward './scss/base/base';
+@forward './scss/base/bases';
+@forward './scss/base/class';
 
 // Layout
-@forward './scss/layout/header';
+@forward './scss/layouts/header';
+@forward './scss/layouts/nav';
+@forward './scss/layouts/container';
+@forward './scss/layouts/grid';
 
 // Views
 @forward './scss/views/home';
+@forward './scss/views/about';
+@forward './scss/views/skills';
+@forward './scss/views/qualification';
+@forward './scss/views/services';
+@forward './scss/views/footer';
 
-// Component
-@forward './scss/components/button';
+// Components
+@forward './scss/components/buttons';
+@forward './scss/components/button-menu';
+@forward './scss/components/button-scroll-down';
+@forward './scss/components/button-tabs';
+@forward './scss/components/button-services';
+@forward './scss/components/modal-services';
+@forward './scss/components/button-scroll-up';
+@forward './scss/components/scroll-bar';
 
 // Queries
+@forward './scss/base/queries';
 

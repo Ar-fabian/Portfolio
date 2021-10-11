@@ -1,0 +1,28 @@
+@use '../utilities/variables.scss';
+
+.nav{
+    &__btns{
+        display: flex;
+        align-items: center;
+    }
+
+    &__close{
+        position: absolute;
+        right: 1.5rem;
+        bottom: .9rem;
+    }
+    &__theme{
+        margin-right: var(--mb-1);
+    }
+}
+
+@mixin medium-device-bm {
+    .nav{
+        &__close, &__toggle{
+            display: none;
+        }
+    }
+    .change-theme{
+        margin: 0;
+    }
+}

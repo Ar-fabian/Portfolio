@@ -4,15 +4,465 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fabian Alvarado</title>
 </head>
 <body>
-    <h1>Webpack inicial</h1>
-    <div id="app">
-        Div App
-    </div>
-    
-    
-    
+    <!-- ========== Header ========== -->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Fabian</a>
+                <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item" id="nav-item">
+                        <a href="#home" class="nav__link active__link">
+                                <img src="assets/icons/bx-home.svg" class="icons nav__icon" alt="home"> Home
+                        </a>
+                    </li>
+                    <li class="nav__item" id="nav-item">
+                        <a href="#about" class="nav__link">
+                                <img src="assets/icons/bx-user.svg" class="icons nav__icon" alt="about">About
+                        </a>
+                    </li>
+                    <li class="nav__item" id="nav-item">
+                        <a href="#skills" class="nav__link">
+                            <img src="assets/icons/bx-file.svg" class="icons nav__icon" alt="skills">Skills
+                        </a>
+                    </li>
+                    <li class="nav__item" id="nav-item">
+                        <a href="#services" class="nav__link">
+                                <img src="assets/icons/bx-briefcase-alt-2.svg" class="icons nav__icon" alt="services">Services
+                        </a>
+                    </li>
+                    <li class="nav__item" id="nav-item">
+                        <a href="#portfolio" class="nav__link">
+                            <img src="assets/icons/bx-images.svg" class="icons nav__icon" alt="portfolio">Portfolio
+                        </a>
+                    </li>    
+                    <li class="nav__item" id="nav-item">
+                        <a href="#contactme" class="nav__link">
+                            <img src="assets/icons/bx-right-arrow.svg" class="icons nav__icon" alt="contactme">Contact
+                        </a>
+                    </li>    
+                </ul>
+                <img src="assets/icons/bx-x-circle.svg" alt="close" class="nav__close icons" id="nav-close">
+                </div>  
+
+                <div class="nav__btns" id="nav-btns">
+                    <!-- Theme change button -->
+                    <div class="nav__theme icons" id="moon" id="theme-button"> 
+                        <img src="assets/icons/bx-moon.svg" alt="moon" id="moon">
+                    </div>
+                    <!-- End Theme change button -->
+                    <div class="nav__toggle icons" id="nav-toggle">
+                        <img src="assets/icons/bx-grid-alt.svg" alt="grid">
+                    </div>
+                </div>
+            </nav>
+        </header>
+    <!--========== End Header ==========-->
+    <!--========== Main ==========-->
+    <main class="main">
+    <!--========== Home ==========-->
+        <section class="home" id="home">
+            <div class="home__container grid">
+                <div class="home__left">
+                    <div class="home__content grid">
+                        <div class="home__social">
+                            <a href="https://www.youtube.com" target="_blank" class="icons">
+                                <img src="assets/icons/bxl-linkedin-square.svg" alt="linkedin">
+                            </a>
+                            <a href="#" target="_blank" class="icons">
+                                <img src="assets/icons/bxl-github.svg" alt="github">
+                            </a>
+                            <a href="#" target="_blank" class="icons">
+                                <img src="assets/icons/bx-mail-send.svg" alt="github">
+                            </a>
+                        </div>
+                        <div class="home__data">
+                            <h1 class="home__title">Hi, I'am Fabian</h1>
+                            <h3 class="home__subtitle">Frontend Developer</h3>
+                            <p class="home__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, non.</p>
+                            <a href="contact" class="button button-flex ">
+                                Contact Me 
+                                <img src="assets/icons/bxs-arrow-to-right.svg" alt="arrow-right" class="icons button__icon">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="button__scroll">
+                        <a href="#about" class="button__scroll-button button-flex">
+                            <i class="fas fa-mouse button__scroll-mouse"></i>
+                            <span class="button__scroll-name">Scroll down</span>
+                            <i class="fas fa-arrow-down button__scroll-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="home__right">
+                    <img src="./assets/img/Developer.svg" alt="Developer" class="home__blob">
+                </div>
+            </div>
+        </section>
+    <!--========== End Home ==========-->
+    <!--========== About ==========-->
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle">My introduction</span>
+
+            <div class="about__container container grid">
+                <!-- <img src="assets/img/about-Me.svg" alt="" class="about__img"> -->
+                <div class="about__data">
+                    <p class="about__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur quidem sed itaque provident nisi quasi inventore dolorum praesentium et dolore.</p>
+
+                    <!-- <div class="about__info">
+                        <div>
+                            <span class="about__info-title">08+</span>
+                            <span class="about__info-name">years<br>experience</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">20+</span>
+                            <span class="about__info-name">Completed<br>projects</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">05+</span>
+                            <span class="about__info-name">Companies<br>Worked</span>
+                        </div>
+                    </div> -->
+                    <div class="about__buttons">
+                        <a download="" href="#Hoja de vida" class="button button-flex">
+                            Download Cv
+                            <svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 24 24" class="button__icon"><path d="m12 16 4-5h-3V4h-2v7H8z"/><path d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2v7z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--========== End About ==========-->
+    <!--========== Skills ==========-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle">Technologies and tools</span>
+
+            <div class="skills__container container grid">
+                <div class="skills__content skills__content-left">
+                    <img src="assets/img/logo-html.png" class=" skills__img" alt="">
+                    <span class="skills__name">Html 5</span>
+                </div>
+                <div class="skills__content skills__content-left">
+                    <img src="assets/img/logo-css.png" class="skills__img" alt="css">
+                    <span class="skills__name">Css 3</span>
+                </div>
+                <div class="skills__content skills__content-left">
+                    <img src="assets/img/logo-javascript.png" class="skills__img" alt="css">
+                    <span class="skills__name">Javascript</span>
+                </div>
+                <div class="skills__content skills__content-right">
+                    <img src="assets/img/logo-sass.png" class=" skills__img" alt="">
+                    <span class="skills__name">Sass</span>
+                </div>
+                <div class="skills__content skills__content-right">
+                    <img src="assets/img/logo-webpack.png" class="skills__img" alt="css">
+                    <span class="skills__name">Webpack</span>
+                </div>
+                <div class="skills__content skills__content-right">
+                    <img src="assets/img/logo-git.png" class="skills__img" alt="css">
+                    <span class="skills__name">Git</span>
+                </div>
+                <div class="skills__content skills__content-right">
+                    <img src="assets/img/logo-react.png" class="skills__img" alt="css">
+                    <span class="skills__name">React</span>
+                </div>
+                </div>
+            </div>
+        </section>
+    <!--========== Fin Skills ==========-->
+    <!--========== Qualification ==========-->
+        <section class="qualification section">
+            <h2 class="section__title">Qualification</h2>
+            <span class="section__subtitle">My personal journey</span>
+
+            <div class="qualification__container container">
+                <div class="qualification__tabs" id="qualification-tabs">
+                    <div class="qualification__button button-flex qualification__active" data-target="#education">
+                        <img src="assets/icons/bxs-graduation.svg" alt="graduation" class="qualification__button-icon" data-target="#education">
+                        Education
+                    </div>
+                    <div class="qualification__button button-flex" data-target="#courses">
+                        <img src="assets/icons/bx-slideshow.svg" alt="slideshow" class="qualification__button-icon" data-target="#courses">
+                        courses
+                    </div>
+                </div>
+
+                <div class="qualification__sections">
+                <!--========== Qualification Content 1 ==========-->
+                    <div class="qualification__content qualification__active" data-content id="education">
+                    <!--========== Qualification 1 ==========-->
+                        <div class="qualification__data">
+                        <div>
+                            <h3 class="qualification__title">Industrial Engineer</h3>
+                            <span class="qualification__subtitle">Politecnico Grancolombiano</span>
+                            <div class="qualification__calendar">
+                                <img src="assets/icons/bx-calendar.svg" alt="calendar" class="qualification__icon">
+                                2018-2021
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="qualification__rounder"></span>
+                            <span class="qualification__line"></span>
+                        </div>
+                        </div>
+                    <!--========== Qualification 2 ==========-->
+                        <div class="qualification__data">
+                        <div></div>
+
+                        <div>
+                            <span class="qualification__rounder"></span>
+                            <!-- <span class="qualification__line"></span> -->
+                        </div>
+                        
+                        <div>
+                            <h3 class="qualification__title">Mechatronic Technologist</h3>
+                            <span class="qualification__subtitle">Sena</span>
+                            <div class="qualification__calendar">
+                                <img src="assets/icons/bx-calendar.svg" alt="calendar" class="qualification__icon">
+                                2014-2016
+                            </div>
+                        </div>   
+                        </div>
+
+                    </div>
+                <!--========== Qualification Content 2 ==========-->
+                    <div class="qualification__content" data-content id="courses">
+                    <!--========== Qualification 1 ==========-->
+                        <div class="qualification__data">
+                        <div>
+                            <h3 class="qualification__title">programming course</h3>
+                            <span class="qualification__subtitle">Platzi</span>
+                            <div class="qualification__calendar">
+                                <img src="assets/icons/bx-calendar.svg" alt="calendar" class="qualification__icon">
+                                2019
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="qualification__rounder"></span>
+                            <span class="qualification__line"></span>
+                        </div>
+                        </div>
+                    <!--========== Qualification 2 ==========-->
+                        <div class="qualification__data">
+                        <div></div>
+
+                        <div>
+                            <span class="qualification__rounder"></span>
+                            <span class="qualification__line"></span>
+                        </div>
+
+                        <div>
+                            <h3 class="qualification__title">Css-grid Course</h3>
+                            <span class="qualification__subtitle">Platzi</span>
+                            <div class="qualification__calendar">
+                                <img src="assets/icons/bx-calendar.svg" alt="calendar" class="qualification__icon">
+                                2019
+                            </div>
+                        </div>
+                        </div>
+
+                        <!--========== Qualification 3 ==========-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Sass course</h3>
+                                <span class="qualification__subtitle">Platzi</span>
+                                <div class="qualification__calendar">
+                                    <img src="assets/icons/bx-calendar.svg" alt="calendar" class="qualification__icon">
+                                    2020
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+                        <!--========== Qualification 4 ==========-->
+                        <div class="qualification__data">
+                        <div></div>
+
+                        <div>
+                            <span class="qualification__rounder"></span>
+                            <span class="qualification__line"></span>
+                        </div>
+
+                        <div>
+                            <h3 class="qualification__title">Modern Javascript Course</h3>
+                            <span class="qualification__subtitle">Udemy</span>
+                            <div class="qualification__calendar">
+                                <img src="assets/icons/bx-calendar.svg" alt="calendar" class="qualification__icon">
+                                2021
+                            </div>
+                        </div>
+                        </div>
+                        <!--========== Qualification 4 ==========-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">React course</h3>
+                                <span class="qualification__subtitle">Udemy</span>
+                                <div class="qualification__calendar">
+                                    <img src="assets/icons/bx-calendar.svg" alt="calendar" class="qualification__icon">
+                                    2021
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <!-- <span class="qualification__line"></span> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--========== End Qualification ==========-->
+    <!--========== Services ==========-->
+        <section class="services section" id="services">
+            <h2 class="section__title section__title-services">Services</h2>
+            <span class="section__subtitle">What i offer</span>
+            <div class="services__container container grid">
+        <!--========== Services 1 ==========-->
+                <div class="services__content">
+                    <div>
+                        <img src="assets/icons/bx-book-content.svg" alt="book" class="services__icon">
+                        <h3 class="services__title">Ux/Ui <br>Designer</h3>
+                    </div>
+                    <span class="button button-flex button-small button-link services__button">
+                        View More
+                        <img src="assets/icons/bxs-arrow-to-right.svg" alt="arrow-right" class="button__icon">
+                    </span>
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <h4 class="services__modal-title">Ui/Ux<br>Designer</h4>
+                            <img src="assets/icons/bx-x-circle.svg" alt="close" class="services__modal-close">
+                            <ul class="services__modal-services grid">
+                                <li class="services__modal-service">
+                                    <img src="assets/icons/bx-check-circle.svg" alt="check" class="services__modal-icon">
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <img src="assets/icons/bx-check-circle.svg" alt="check" class="services__modal-icon">
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <img src="assets/icons/bx-check-circle.svg" alt="check" class="services__modal-icon">
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        <!--========== Services 2 ==========-->
+                <div class="services__content">
+                    <div>
+                        <img src="assets/icons/bx-code-alt.svg" alt="code-alt" class="services__icon">
+                        <h3 class="services__title">Front-end <br>Developer</h3>
+                    </div>
+                    <span class="button button-flex button-small button-link services__button">
+                        View More
+                        <img src="assets/icons/bxs-arrow-to-right.svg" alt="arrow-right" class="button__icon">
+                    </span>
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <h4 class="services__modal-title">Front-end<br>Developer</h4>
+                            <img src="assets/icons/bx-x-circle.svg" alt="close" class="services__modal-close">
+                            <ul class="services__modal-services grid">
+                                <li class="services__modal-service">
+                                    <img src="assets/icons/bx-check-circle.svg" alt="check" class="services__modal-icon">
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <img src="assets/icons/bx-check-circle.svg" alt="check" class="services__modal-icon">
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <img src="assets/icons/bx-check-circle.svg" alt="check" class="services__modal-icon">
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        <!--========== Services 3 ==========-->
+                <div class="services__content">
+                    <div>
+                        <img src="assets/icons/bx-pencil.svg" alt="pencil" class="services__icon">
+                        <h3 class="services__title">Ux/Ui <br>Designer</h3>
+                    </div>
+                    <span class="button button-flex button-small button-link services__button">
+                        View More
+                        <img src="assets/icons/bxs-arrow-to-right.svg" alt="arrow-right" class="button__icon">
+                    </span>
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <h4 class="services__modal-title">Ui/Ux<br>Designer</h4>
+                            <img src="assets/icons/bx-x-circle.svg" alt="close" class="services__modal-close">
+                            <ul class="services__modal-services grid">
+                                <li class="services__modal-service">
+                                    <img src="assets/icons/bx-check-circle.svg" alt="check" class="services__modal-icon">
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <img src="assets/icons/bx-check-circle.svg" alt="check" class="services__modal-icon">
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <img src="assets/icons/bx-check-circle.svg" alt="check" class="services__modal-icon">
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--========== End Services ==========-->
+    </main>
+    <!--========== Footer ==========-->
+        <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div class="footer__data">
+                        <h1 class="footer__title">Fabian</h1>
+                        <span class="footer__subtitle">Frontend Developer</span>
+                    </div>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#services" class="footer__link">Services</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio" class="footer__link">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="footer__link">Contactme</a>
+                        </li>
+                    </ul>
+
+                    <div class="footer__socials">
+                        <a href="https://web.whatsapp.com/" target="_blank" class="footer__social">
+                            <img src="assets/icons/bxl-whatsapp.svg" alt="whatsapp" class="footer__social-icon">
+                        </a>
+                        <a href="" target="_blank" class="footer__social">
+                            <img src="assets/icons/bxl-linkedin-square.svg" alt="linkedin" class="footer__social-icon">
+                        </a>
+                    </div>
+                </div>
+                <p class="footer__copy">&#169; </p>
+            </div>
+        </footer>
+    <!--========== End Footer ==========-->
+    <!--========== Scroll Up ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <img src="assets/icons/bx-up-arrow-alt.svg" alt="arrow-up" class="scrollup__icon">
+       </a>
+       <!--========== Fin Scroll Up ==========-->
 </body>
 </html>

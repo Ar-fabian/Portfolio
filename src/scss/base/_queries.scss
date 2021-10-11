@@ -1,0 +1,66 @@
+@use '../utilities/variables.scss';
+@use '../base/bases' as body;
+@use '../base/class' as section;
+@use '../base/class' as main;
+@use '../base/class' as icon;
+@use '../layouts/container';
+@use '../layouts/header';
+@use '../layouts/nav';
+@use '../views/home';
+@use '../views/about';
+@use '../views/qualification';
+@use '../views/services';
+@use '../views/footer';
+@use '../components/button-menu' as bm;
+@use '../components/button-scroll-down' as bsd;
+@use '../components/button-tabs' as bt;
+@use '../components/modal-services' as ms;
+@use '../components/button-scroll-up' as su;
+
+
+@media screen and(max-width:768px){
+        @include nav.medium-device-nav;
+}
+@media screen and(max-width: 350px){
+    @include container.small-device-container;
+    @include nav.small-device-nav;
+    @include home.small-device-home;
+    @include qualification.small-device-qualification;
+    @include services.small-device-services;
+    @include ms.small-device-ms;
+}
+@media screen and(min-width: 568px){
+    @include home.medium-device-home;
+    @include about.medium-device-about;
+    @include qualification.medium-device-qualification;
+    @include footer.medium-device-footer;
+}
+@media screen and(min-width: 768px){
+    @include container.medium-device-container;
+    @include body.medium-device-body;
+    @include section.medium-device-class;
+    @include header.medium-device-header;
+    @include main.medium-device-class;
+    @include footer.medium-device-footer2;
+    @include nav.medium-device-nav2;
+    @include bm.medium-device-bm;
+    @include home.medium-device-home2;
+    @include bsd.medium-device-bsd;
+    @include about.medium-device-about2;
+    @include qualification.medium-device-qualification2;
+    @include bt.medium-device-bt;
+    @include services.medium-device-services;
+    @include ms.medium-device-ms;
+    @include su.medium-device-su;
+}
+@media screen and(min-width: 1024px){
+    @include header.big-device-header;
+    @include main.big-device-class;
+    @include footer.big-device-footer;
+    @include home.big-device-home;
+}
+
+
+
+
+

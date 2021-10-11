@@ -1,0 +1,62 @@
+@use '../utilities/variables';
+
+.about{
+    background-color: #2EC4B6;
+    &__img{
+        width: 250px;
+        border-radius: .5rem;
+        justify-self: center;
+        align-self: center;
+    }
+    &__description{
+        text-align: center;
+        margin-bottom: var(--mb-2-5);
+    }
+    &__info{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: var(--mb-2-5);
+        &-title{
+            font-size: var(--h2-font-size);
+            font-weight: var(--font-semi-bold);
+            color: var(--title-color);
+        }
+        &-name{
+            font-size: var(--smaller-font-size);
+        }
+        &-title, &-name{
+            display: block;
+            text-align: center;
+        }
+    }
+    &__buttons{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@mixin medium-device-about2{
+    .about{
+        &__container{
+            column-gap: 5rem;
+        }
+        &__img{
+            width: 350px;
+        }
+        &__data{
+            padding: 30px 0;
+        }
+        &__description{
+            text-align: initial;
+        }
+        &__buttons{
+            justify-content: initial;
+        }
+    }
+}
+@mixin medium-device-about{
+    .about__container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+    

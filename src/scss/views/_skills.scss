@@ -1,0 +1,31 @@
+@use '../utilities/variables';
+
+.skills{
+    &__container{
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        overflow: hidden;
+    }
+    &__content{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        transition: 2s transform;
+        // &-left{
+        //     transform: translateX(-420%);
+        // }
+        // &-right{
+        //     transform: translateX(420%);
+        // }
+    }
+    &__img{
+        // width: 100px;
+        max-height: 105px; 
+    }
+    &__name{
+        font-size: var(--normal-font-size);
+    }
+    &__container:hover>&__content{
+        transform: translateX(0);
+    }
+}

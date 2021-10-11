@@ -1,0 +1,39 @@
+.qualification{
+    &__tabs{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: var(--mb-2);
+    }
+    &__button{
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-medium);
+        cursor: pointer;
+        &-icon{
+            height: 1.5rem;
+            margin-right: var(--mb-0-25);
+            fill: var(--text-color-light);
+        } 
+        &:hover{
+            color: var(--first-color);
+            filter: var(--i-first-color);
+        }
+    }
+    
+    &__button.qualification__active{
+        color: var(--first-color);
+    }
+    &__button.qualification__active > &__button-icon{
+        filter: var(--i-first-color);
+    }
+}
+
+@mixin medium-device-bt {
+    .qualification{
+        &__tabs{
+            justify-content: center;
+        }
+        &__button{
+            margin: 0 var(--mb-1);
+        }
+    }
+}

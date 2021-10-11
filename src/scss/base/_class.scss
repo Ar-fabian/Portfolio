@@ -1,0 +1,43 @@
+@use '../utilities/variables.scss';
+
+
+.section{
+    padding: 2rem 0 4rem;
+    &__title{
+        font-size: var(--h1-font-size);
+    }
+    &__subtitle{
+        display: block;
+        font-size: var(--small-font-size);
+        margin-bottom: var(--mb-3);
+    }
+    &__title, &__subtitle{
+        text-align: center;
+    }
+}
+.icons{
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    filter: var(--i-title-color);
+    &:hover{
+        filter: var(--i-first-color);
+    }
+}
+@mixin medium-device-class {
+    .main{
+        padding: 0 1rem;
+    }
+    .section{
+        padding: 4.5rem 0 0;
+        &__subtitle{
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+@mixin big-device-class {
+    .main{
+        padding: 0;
+    }
+}

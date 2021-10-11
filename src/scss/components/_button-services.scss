@@ -1,0 +1,7 @@
+.services__button{
+    cursor: pointer;
+    font-size: var(--small-font-size);
+    &:hover .button__icon{
+        transform: translateX(.25rem);
+    }
+}

@@ -1,0 +1,33 @@
+.scrollup{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: .5rem;
+    bottom: 6rem;
+    background-color: var(--first-color);
+    opacity: .8;
+    padding: 0 .3rem;
+    border-radius: .4rem;
+    z-index: var(--z-tooltip);
+    transform:translateY(6rem);
+    transition: .4s transform;
+    &:hover{
+        background-color: var(--first-color-alt);
+    }
+    &__icon{
+        width: 1.5rem;
+        height: 2rem;
+        fill: #fff;
+    }
+}
+.show-scroll{
+    transform:translateY(0);
+}
+@mixin medium-device-su {
+    .scrollup{
+        transform:translateY(8rem);
+    }
+    .show-scroll{
+        transform:translateY(0);
+    }
+}
