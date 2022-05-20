@@ -1,101 +1,92 @@
 @use '../utilities/variables';
+@use '../base/animations';
 .home{
-    background-color: #011627;
-    color: #fff;
-    
-    &__left{
-        display: inline;
-        width: 60%;
-        height: 100vh;
-        background-color: #2ec4b6;
-        clip-path: polygon(0 0, 40% 0, 100% 100%, 0 100%);
-        animation: mymove 3s cubic-bezier(.44, .05, 0, .98) 0s;
-    }
-    @keyframes mymove {
-        0%{
-        clip-path: polygon(0 0, 0 0,0 100%, 0 100%);
-        }
-    }
+    position: relative;
+    overflow: hidden;
     &__container{
-        gap: 1rem;
-        display: flex;
-        align-items: center;
+        justify-items: center;
     }
-    &__content{
-        grid-template-columns: 0.5fr 3fr;
-        padding-top: 3.5rem;
-        align-items: center;
-    }
-    &__social{
-        display: grid;
-        grid-template-columns: max-content;
-        row-gap: 1rem;
-    }
-    
-    &__data{
-        grid-column: 1/3;
-    }
-    &__title{
-        font-size: var(--big-font-size);
-        color: #011627;
-    }
-    &__subtitle{
-        font-size: var(--h3-font-size);
-        color: #011627;
-        font-weight: var(--font-medium);
-        margin-bottom: var(--mb-0-75);
-    }
-    &__description{
-        margin-bottom: var(--mb-2);
-    }
-    &__right{
+    &__presentation{
+        margin-top: 2.5rem;
         position: relative;
-        width: 400px;
-        height: 300px;
-        border: 2px solid #FF9F1C;
-        border-radius: 50%;
+        width: 100%;
+        text-align: left;
+    } 
+    &__fullname{
+        display: flex;
     }
-    
-    
-    
-    
-}
-@mixin medium-device-home2 {
-    .home{
-        &__container{
-            row-gap: 5rem;
-        }
-        &__content{
-            padding-top: 6.6rem;
-            column-gap: 2rem;
-        }
+    &__greeting, &__name,&__position{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        letter-spacing: 2px;
+        font-size: var(--big-font-size);
+        font-weight: 700;
+        color: #fff;
+        -webkit-text-stroke: 1px rgba(255,255,255,0.5);
     }
-}
-@mixin medium-device-home {
-    .home{
-        &__content{
-            grid-template-columns: max-content 1fr 1fr;
-        }
-        &__data{
-            grid-column: initial;
-        }
-        &__img{
-            order: 1;
-            justify-self: center;
-        }
+    &__polygon{
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        width: 90%;
+        height: 400px;
+        opacity: .5;
+        transform: rotate(5deg);
     }
-}
-@mixin small-device-home {
-    .home{
-        &__content{
-            grid-template-columns: .25fr 3fr;
+    &__button{
+        font-size: var(--small-font-size);
+        padding: .5em;
+        color: var(--text-color);
+        text-align: center;
+        border:1px solid #147DF5;
+        &:hover{
+            color: #147DF5;
         }
     }
 }
-@mixin big-device-home {
-    .home{
-        &__social{
-            // transform: translateX(-6rem);
-        }
+@mixin mobile-big-home{
+    .home__position{
+        font-size: var(--h1-font-size);
     }
 }
+
+// @mixin medium-device-home2 {
+//     .home{
+//         &__container{
+//             row-gap: 5rem;
+//         }
+//         &__content{
+//             padding-top: 6.6rem;
+//             column-gap: 2rem;
+//         }
+//     }
+// }
+// @mixin medium-device-home {
+//     .home{
+//         &__content{
+//             grid-template-columns: max-content 1fr 1fr;
+//         }
+//         &__data{
+//             grid-column: initial;
+//         }
+//         &__img{
+//             order: 1;
+//             justify-self: center;
+//         }
+//     }
+// }
+// @mixin small-device-home {
+//     .home{
+//         &__content{
+//             grid-template-columns: .25fr 3fr;
+//         }
+//     }
+// }
+// @mixin big-device-home {
+//     .home{
+//         &__social{
+//             // transform: translateX(-6rem);
+//         }
+//     }
+// }

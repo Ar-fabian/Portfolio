@@ -1,62 +1,93 @@
 @use '../utilities/variables';
 
 .about{
-    background-color: #2EC4B6;
-    &__img{
-        width: 250px;
-        border-radius: .5rem;
-        justify-self: center;
-        align-self: center;
+    // width: 100%;
+    position: relative;
+    &__title{
+        color:var(--yellow);
+        font-size: var(--about-font-size);
+    }
+    &__mask{
+        fill: var(--yellow);
+    }
+    &__container{
+        width: 100%;
+        position: relative;
     }
     &__description{
         text-align: center;
-        margin-bottom: var(--mb-2-5);
+        height: 100%;
+        color: var(--text-color);
+        z-index: 1;
     }
-    &__info{
-        display: flex;
-        justify-content: space-evenly;
-        margin-bottom: var(--mb-2-5);
-        &-title{
-            font-size: var(--h2-font-size);
-            font-weight: var(--font-semi-bold);
-            color: var(--title-color);
-        }
-        &-name{
-            font-size: var(--smaller-font-size);
-        }
-        &-title, &-name{
-            display: block;
-            text-align: center;
-        }
+    &__text{
+        font-size: var(--normal-font-size);
     }
-    &__buttons{
+    &__containerSvg{
+        width: 70vw;
+        height: 45vw;
+        max-width: 500px;
+        padding: 15%;
+        margin: 0 auto;
         display: flex;
-        justify-content: center;
+        overflow: hidden;
+        box-shadow:inset 0rem 0rem 0rem #000;
+        box-sizing: border-box;
+    }
+    &__contentSvg{
+        width: 100%;
+        flex-shrink: 0;
+        // margin-right: 5vw;
+        text-align: center;
+        transform-origin: center;
+        transform: translateX(135%);
+    }
+    &__svg{
+        width: 40%;
+    }
+    &__svgText{
+        font-size: var(--small-font-size);
+    }
+    &__showSvg{
+        visibility: visible;
+    }
+      
+}
+
+@mixin mobile-portrait-about {
+    .about__text{
+        font-size: var(--normal-font-mobile-portrait);
+    }
+}
+@mixin mobile-landscape-about {
+    .about__containerSvg{
+        --height: 230px;
     }
 }
 
-@mixin medium-device-about2{
-    .about{
-        &__container{
-            column-gap: 5rem;
-        }
-        &__img{
-            width: 350px;
-        }
-        &__data{
-            padding: 30px 0;
-        }
-        &__description{
-            text-align: initial;
-        }
-        &__buttons{
-            justify-content: initial;
-        }
-    }
-}
-@mixin medium-device-about{
-    .about__container{
-        grid-template-columns: repeat(2,1fr);
-    }
-}
+// @mixin medium-device-about2{
+//     .about{
+//         &__container{
+//             column-gap: 5rem;
+//         }
+//         &__img{
+//             width: 500px;
+//             height: auto;
+//         }
+//         &__data{
+//             padding: 30px 0;
+//         }
+//         &__description{
+//             text-align: initial;
+//         }
+//         &__buttons{
+//             justify-content: initial;
+//         }
+//     }
+// }
+// @mixin medium-device-about{
+//     .about__container{
+//         grid-template-columns: repeat(2,1fr);
+//     }
+// }
     

@@ -1,6 +1,18 @@
 @use '../utilities/variables.scss';
 
 .grid{
+    width: 100%;
     display: grid;
-    gap: 1.5rem;
+    gap: 2.5rem;
+    // justify-content: center;
+    padding: 0 10%;
+    box-sizing: border-box;
+    // grid-template-rows: repeat(10,1fr);
+    // grid-template-columns: repeat(auto-fit,minmax(min(100%, 30rem),2fr));
+}
+
+@mixin mobile-landscape-grid {
+    .grid{
+        padding: 0 5%;
+    }
 }

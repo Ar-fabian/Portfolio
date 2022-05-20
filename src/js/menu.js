@@ -1,4 +1,3 @@
-
 export default function menu(navToggle, navClose, navLink, navMenu){
     const d = document;
     
@@ -9,7 +8,7 @@ export default function menu(navToggle, navClose, navLink, navMenu){
         if( selectorMatches(navToggle) || selectorMatches(`${navToggle} *`)){
             d.getElementById(navMenu).classList.add('show-menu');
         }
-        if(selectorMatches(navClose) || selectorMatches(`${navLink} *`)){
+        if(selectorMatches(navClose) || selectorMatches(`${navClose} *`) || selectorMatches(`${navLink} *`)){
             d.getElementById(navMenu).classList.remove('show-menu');
         }
     });

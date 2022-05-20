@@ -1,27 +1,41 @@
 @use '../base/fonts';
 :root{
-    --header-height: 3rem;
+    --header-height: 2rem;
 
     /*******Colors*******/ 
     --hue-color: 215;
 
-    --first-color: hsl(var(--hue-color), 92%, 35%);
-    --first-color-second: hsl(var(--hue-color), 92%, 55%);
-    --first-color-alt: hsl(var(--hue-color), 95%, 51%);
-    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-    --title-color: hsl(var(--hue-color), 8%, 15%);
-    --text-color: hsl(var(--hue-color), 8%, 45%);
-    --text-color-light: hsl(var(--hue-color), 8%, 65%);
-    --input-color: hsl(var(--hue-color), 70%, 96%);
-    --body-color: hsl(var(--hue-color), 60%, 99%);
-    --container-color: #fff;
+    // --first-color: hsl(215, 92%, 35%);
+    // --first-color-second: hsl(var(--hue-color), 92%, 55%);
+    // --first-color-alt: hsl(var(--hue-color), 95%, 51%);
+    // --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    // --title-color: hsl(var(--hue-color), 8%, 15%);
+    // --text-color: hsl(var(--hue-color), 8%, 45%);
+    // --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    // --input-color: hsl(var(--hue-color), 70%, 96%);
+    // --body-color: hsl(var(--hue-color), 60%, 99%);
+    // --container-color: #fff;
+    // --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    // --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+    // --first-color: rgba(12,12,12,.9);
+    // --first-color: #1d1d1d;
+    --body-color: rgba(29,29,29,1);
+    --yellow: rgb(182, 145, 33);
+    --light-yellow: rgb(255, 209, 102);
+    --blue: rgb(10, 239, 255);
+    --green: rgb(10, 255, 153);
+    --purple: rgb(20, 125, 245);
+    --text-color: rgb(248, 249, 250);
+    --second-text-color: rgb(21,21,21);
+    --sentence-color: rgba(255,255,255, .2);
+    --dark-color: rgb(21,21,21);
+    --gray: rgb(37, 37, 37);
+
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
-    /*******Icons Colors*******/ 
-    --i-first-color: invert(22%) sepia(83%) saturate(1885%) hue-rotate(202deg) brightness(89%) contrast(101%);
-    --i-title-color: invert(15%) sepia(5%) saturate(781%) hue-rotate(182deg) brightness(93%) contrast(99%);
-    --i-text-color-light: invert(77%) sepia(10%) saturate(222%) hue-rotate(175deg) brightness(85%) contrast(85%);
+    
 
 
 
@@ -29,13 +43,21 @@
 
     --body-font: 'Poppins', sans-serif;
 
-    --big-font-size: 2rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1.125rem;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
+    --big-font-size: clamp(1rem, 7.5vw, 4.5rem);
+    --h1-font-size: clamp(.9rem, 6.5vw, 5rem);
+    --h2-font-size: clamp(.92rem, 7vw, 4rem);
+    --about-font-size: clamp(.92rem, 4.9vw, 4rem);
+    --studies-target: clamp(.7rem, 5.5vw, 1.7rem);
+    --h3-font-size: clamp(.3rem, 3.8vw, 1.4rem);
+    --small-font-size: clamp(.1rem, 3.8vw, 1.3rem);
+    --smaller-font-size: clamp(.4rem, 3.8vw, 1.2rem);
+    --card-title-font: clamp(1rem, 4vw, 4rem);
+    --card-button-font: clamp(.7rem, 1.7vw, 1.8rem);
+    --nav-icons-size: clamp(1.25rem, 4vw, 6rem);
+
+    --normal-font-size: .838rem;
+
+    
 
 
     /*==========Font weight==========*/ 
@@ -57,28 +79,18 @@
     /*========== Z index ==========*/ 
 
     --z-tooltip: 10;
-    --z-fixed: 100;
+    --z-fixed: 3;
     --z-modal: 1000;
 
-    /* Font size for large devices */ 
+/* Font size for large devices */ 
 
-    @media screen and (min-width: 968px){
-            --big-font-size: 3rem;
-            --h1-font-size: 2.25rem;
-            --h2-font-size: 1.5rem;
-            --h3-font-size: 1.25rem;
-            --normal-font-size: 1rem;
-            --small-font-size: .875rem;
-            --smaller-font-size: .813rem;      
-    }
-    body.dark-theme{
-    --first-color-second: hsl(var(--hue-color), 30%, 8%);
-    --title-color: hsl(var(--hue-color), 8%, 95%);
-    --text-color: hsl(var(--hue-color), 8%, 75%);
-    --input-color: hsl(var(--hue-color), 29%, 16%);
-    --body-color: hsl(var(--hue-color), 28%, 12%);
-    --container-color: hsl(var(--hue-color), 29%, 16%);
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
-    }   
+// @media screen and (min-width: 968px){
+//         --big-font-size: 3rem;
+//         --h1-font-size: 2.25rem;
+//         --h2-font-size: 1.5rem;
+//         --h3-font-size: 1.25rem;
+//         --normal-font-size: 1rem;
+//         --small-font-size: .875rem;
+//         --smaller-font-size: .813rem;      
+// } 
 }

@@ -1,0 +1,62 @@
+@use '../utilities/variables.scss';
+.section{
+    padding: 2rem 0;
+    &__sentence{
+        width: 100%;
+        position: relative;
+        margin-bottom: 2.5rem;
+    }
+    &__mask-container{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &__mask-content{
+        width: 100%;
+        height: 130%;
+        transform: scaleX(0);
+    }
+    &__title{
+        font-size: var(--h2-font-size);
+        visibility: hidden;
+    }
+    &__subtitle{
+        font-size: calc(var(--h2-font-size) - .3rem);
+        margin-left: .6rem;
+        color: #FDFFFC;
+    }
+    &__text{
+        position: absolute;
+        color: var(--sentence-color);
+        font-weight: 800;
+        text-transform: uppercase;
+        z-index: -1;
+        top: -42%;
+        font-size: var(--h2-font-size);
+        transform: translateY(40%);
+        opacity: 0;
+    }
+}
+
+@mixin mobile-big-sections{
+    // .section{
+    //     &__title{
+    //         font-size: var(--h2-mobile-big);
+    //     }
+    //     &__subtitle{
+    //         font-size: var(--subtitle-mobile-big);
+    //     }
+    // }
+}
+// @mixin medium-device-class {
+//     .section{
+//         padding: 4.5rem 0 0;
+//         &__subtitle{
+//             margin-bottom: 4rem;
+//         }
+//     }
+// }
+
+// @mixin big-device-class {
+// }

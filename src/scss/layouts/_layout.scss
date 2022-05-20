@@ -1,0 +1,21 @@
+.layout{
+    display: grid;
+    box-sizing: border-box;
+    // padding-right: 10%;
+    // padding-left: 10%;
+}
+
+@mixin mobile-landscape-layout{
+    .layout{
+        grid-template-columns: .4fr 2fr ;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "header main";
+    }
+    .header{
+            grid-area: header; 
+        }
+    main{
+        grid-area: main;
+    }
+}

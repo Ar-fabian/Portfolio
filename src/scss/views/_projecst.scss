@@ -1,0 +1,12 @@
+.projects{
+    position: relative;
+    &__title{
+        color: var(--green);  
+    }
+    &__mask{
+        fill: var(--green);
+    }
+    &__container{
+        grid-template-columns: 1fr;
+    }
+}

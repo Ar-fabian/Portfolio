@@ -1,32 +1,21 @@
-// Utilities
 @forward './scss/utilities/variables.scss';
-// Base
 @forward './scss/base/bases';
 @forward './scss/base/sections';
-
-// Layout
 @forward './scss/layouts/header';
 @forward './scss/layouts/nav';
 @forward './scss/layouts/container';
 @forward './scss/layouts/grid';
-
-// Views
 @forward './scss/views/home';
 @forward './scss/views/about';
 @forward './scss/views/skills';
 @forward './scss/views/studies';
 @forward './scss/views/projecst';
-@forward './scss/views/contact';
-
-// Components
+@forward './scss/views/footer';
 @forward './scss/components/buttons';
-@forward './scss/components/buttons-menu';
+@forward './scss/components/button-menu';
 @forward './scss/components/cube-skills';
 @forward './scss/components/button-tabs';
 @forward './scss/components/card-projects';
 @forward './scss/components/button-scroll-up';
-// @forward './scss/components/scroll-bar';
-
-// Queries
 @forward './scss/base/queries';
-
+/*# sourceMappingURL=style.css.map */

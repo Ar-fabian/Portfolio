@@ -1,0 +1,91 @@
+.contact{
+    position: relative;
+    width: 100%;
+    &__title{
+        color: var(--purple);  
+    }
+    &__mask{
+        fill: var(--purple);
+    }
+    &__container{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__social{
+        position: relative;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    &__toggle{
+        width: 11vw;
+        height: auto;
+        max-width: 90px;
+        position: relative;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+        transition: transform 1.25s;
+    }
+    &__screen{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border-radius: 50%;
+    }
+    &__icons{
+        width: 11vw;
+        fill: var(--purple);
+        &--small{
+            width: 80%;
+        }
+    }
+    &__item{
+        position: absolute;
+        left: 50%;
+        list-style: none;
+        transform-origin: 0%;
+        transition: 0.5s;
+        transition-delay: calc(0.1s * var(--i));
+        transform: rotate(0deg) translateX(-50%);
+    }
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:  11vw;
+        height: 11vw;
+        max-width: 70px;
+        max-height: 70px;
+        border-radius: 50%;
+        background-color: #fff;
+        transform: rotate(calc(360deg / -5 * var(--i)));
+        &:hover{
+            fill: var(--purple);
+        }
+    }
+    &__active &__toggle{
+        transform: rotate(315deg);
+    }
+    &__active &__item{
+        transform: rotate(calc(360deg / 5 * var(--i))) translateX(120%);
+    }
+}
+@mixin mobile-landscape-contact {
+    .contact{
+        display: none;
+    }
+}

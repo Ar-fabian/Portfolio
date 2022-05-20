@@ -1,25 +1,38 @@
+import contact from "./js/contact";
+import splashHome from "./js/home";
 import menu from "./js/menu";
-import qualificationTabs from "./js/qualificationTabs";
-import modalServices from './js/modalServices';
-import headerColor from './js/headerColor';
-import scrollActive from './js/scrollActiveLink';
-import scrollUp from "./js/scrollUp";
+import scrollTitles from "./js/scrollTitles";
+import about from "./js/about";
+import skills from "./js/skills";
+import studies from "./js/studies";
+// import headerColor from './js/headerColor';
+// import scrollActive from './js/scrollActiveLink';
+// import scrollUp from "./js/scrollUp";
 import './style.scss';
 
 
 
 const d = document;
-
-
 d.addEventListener('DOMContentLoaded',(e)=>{
-    menu('#nav-toggle','#nav-close','#nav-item','nav-menu');
-    qualificationTabs('[data-target]');
-    modalServices();
+    // splashHome();
+    scrollTitles();
+    about();
+    skills();
 }); 
 
-d.addEventListener('scroll',()=>{
-  scrollActive();
-  headerColor();
-  scrollUp();
+d.addEventListener('click', (e)=>{
+    const element = e.target;
+    menu('#header-btn','#nav-close','#nav-item','nav-menu');
+    if( element.matches('[data-target]') ) studies(element);
+    if( element.matches('.contact__screen') ) contact();
+  
+
 });
+
+
+// d.addEventListener('scroll',()=>{
+//   scrollActive();
+//   headerColor();
+//   scrollUp();
+// });
 

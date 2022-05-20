@@ -1,0 +1,16 @@
+@use '../utilities/variables.scss';
+
+
+.nav__close{
+    position: absolute;
+    right: 1.5rem;
+    bottom: .9rem;
+}
+
+@mixin mobile-landscape-btnM {
+    .nav{
+        &__toggle, &__close{
+            display: none;
+        }
+    }
+}

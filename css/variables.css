@@ -1,0 +1,50 @@
+@use '../base/fonts';
+:root {
+  --header-height: 2rem;
+  /*******Colors*******/
+  --hue-color: 215;
+  --body-color: rgba(29,29,29,1);
+  --yellow: rgb(182, 145, 33);
+  --light-yellow: rgb(255, 209, 102);
+  --blue: rgb(10, 239, 255);
+  --green: rgb(10, 255, 153);
+  --text-color: rgb(248, 249, 250);
+  --second-text-color: rgb(21,21,21);
+  --sentence-color: rgba(255,255,255, .2);
+  --dark-color: rgb(21,21,21);
+  --gray: rgb(37, 37, 37);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  /*==========Font and typography==========*/
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: clamp(.9rem, 6vw, 4rem);
+  --h1-font-size: clamp(.9rem, 6.5vw, 5rem);
+  --h2-font-size: clamp(.92rem, 7vw, 4rem);
+  --about-font-size: clamp(.92rem, 4.9vw, 4rem);
+  --studies-target: clamp(.7rem, 5.5vw, 1.7rem);
+  --h3-font-size: clamp(.57rem, 4.5vw, 1.5rem);
+  --small-font-size: clamp(.70rem, 1rem, 5rem);
+  --smaller-font-size: clamp(.5rem, 0.9rem, 4rem);
+  --card-title-font: clamp(1.2rem, 4vw, 4rem);
+  --card-button-font: clamp(.7rem, 1.7vw, 1.8rem);
+  --nav-icons-size: clamp(1.25rem, 4vw, 6rem);
+  --normal-font-size: .838rem;
+  /*==========Font weight==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /*==========Margins Bottom==========*/
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  /*========== Z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 3;
+  --z-modal: 1000;
+  /* Font size for large devices */
+}
+/*# sourceMappingURL=variables.css.map */

@@ -1,19 +1,11 @@
 @use '../utilities/variables.scss';
 
 .button{
-    display: inline-block;
-    background-color: var(--first-color);
-    color: #fff;
-    padding: 1rem;
-    border-radius: .5rem;
+    // display: block;
+    border-radius: 5px;
     font-weight: var(--font-medium);
-    font-size: 1.1rem;
-
-    &:hover{
-        background-color: var(--first-color-alt);
-    }
     &-flex{
-        display: inline-flex;
+        display: flex;
         align-items: center;
     }
     &-small{
@@ -23,7 +15,6 @@
         padding: 0;
         background-color: transparent;
         color: var(--first-color);
-        fill: var(--first-color);
         &:hover{
             background-color: transparent;
             color: var(--first-color-alt);
@@ -33,11 +24,8 @@
     &__icon{
         width: 2rem;
         height: 2rem;
-        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(356deg) brightness(102%) contrast(105%);
         margin-left: var(--mb-0-5);
         transition: .3s;
-        &:hover{
-            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(356deg) brightness(102%) contrast(105%);
-        }
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(356deg) brightness(102%) contrast(105%);
     }
 }
